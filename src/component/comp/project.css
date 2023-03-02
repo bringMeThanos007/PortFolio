@@ -1,0 +1,127 @@
+:root {
+    --orange: #FF4740;
+    --white: ghostwhite;
+    --blue: #1ca69d;
+    --green: #3affb9;
+    --black: #0F0F0F;
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s linear;
+    transition-delay: 0.3s;
+    z-index: 1;
+    background-color: #3affb9;
+}
+
+.section.rotate {
+    transform: rotate(-17deg);
+    transition-delay: 0.3s;
+}
+
+.projects {
+    width: inherit;
+    height: 100vh;
+    background: url('../../img/nine.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll_projects {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: rbga(255,255,255,0.3);
+    backdrop-filter: blur(20px);
+}
+.project_map{
+    position: relative;
+    margin: 10px;
+    background-position: top;
+    transition: ease-in-out 4s;
+    height: 150px;
+    width: 250px;
+    border-radius: 10px;
+}
+.project_map h6{
+    text-align: center;
+}
+.project_map a{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.5rem;
+    margin: 5px;
+    color: var(--orange);
+}
+.project_map a:hover{
+    color: var(--blue);
+}
+/* for news nation */
+.portfolio{
+    background: url('../../img/port.png');
+    background-size: cover;
+    transition: ease-in-out 6s;
+}
+/* for news_nation */
+.news_nation{
+    background: url('../../img/News_Nation.png');
+    background-size: cover;
+}
+/* for food_nation */
+.food_nation{
+    background: url('../../img/food_nation.png');
+    background-size: cover;
+}
+/* for trip */
+.trip{
+    background: url('../../img/trip.png');
+    background-size: cover;
+    transition: ease-in-out 8s;
+}
+/* for qulab_frontend */
+.qulab{
+    background: url('../../img/qulab.png');
+    background-size: cover;
+    transition: ease-in-out 8s;
+}
+.miwak{
+    background: url('../../img/miwak.png');
+    background-size: cover;
+    transition: ease-in-out 8s;
+    color: var(--white);
+}
+.ttt{
+    background: url('../../img/ttt.png');
+    background-size: cover;
+    transition: ease-in-out 6s;
+    color: var(--white);
+}
+.project_map:hover{
+    background-position: bottom;
+}
+@media(max-width:830px ){
+    .project_map{
+        margin: 10px;
+        height: 100px;
+        width: 200px;
+    }
+}
+@media(max-width:450px ){
+    .project_map{
+        margin: 10px;
+        height: 70px;
+        width: 130px;
+    }
+}

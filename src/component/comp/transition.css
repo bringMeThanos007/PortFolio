@@ -1,0 +1,106 @@
+
+:root {
+    --orange: #FF4740;
+    --white: ghostwhite;
+    --blue:#1ca69d;
+    --green :#3affb9;
+    --black:#0F0F0F;
+  }
+  /* .sheet{
+    width: min-content;
+    height: min-content;
+  } */
+  .section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s linear;
+    transition-delay: 0.3s;
+    z-index: 1;
+}
+.section.rotate{
+    transform: rotate(-17deg);
+    transition-delay: 0.3s;
+}
+.tranistion{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width : inherit;
+    height: 100vh;
+    /* background: linear-gradient(#F9EA8F,#AFF1DA); */
+    background: linear-gradient(#83EAF1,#63A4FF);
+    z-index: 1;
+}
+
+.section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#sun{
+    z-index: 2;
+    top: -100%;
+    transition: top 0.5s ease-out;
+    transition-delay: 1.2s;
+    cursor: pointer;
+}
+
+section img#two{
+    z-index: 10;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-out;
+    transition-delay: 0.2s;
+    
+}
+
+section img#four{
+    z-index: 6;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-out;
+    transition-delay: 1.7s;
+}
+section img#five{
+    z-index: 4;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in;
+    transition-delay: 0.7s;
+}
+section .btn_play{
+    position: absolute;
+    z-index: 20;
+    transform: translateY(0);
+    transition: transform 0.2s ease-in;
+    transition-delay: 0s;
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--black);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.text{
+    padding: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.5rem;
+    z-index: 15;
+    color: var(--orange);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+    transition-delay: 2.1s;
+}
+.text small{
+    color: var(--white);
+    margin-left: 5px;
+}

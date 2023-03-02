@@ -1,0 +1,144 @@
+:root {
+    --orange: #FF4740;
+    --white: ghostwhite;
+    --blue:#1ca69d;
+    --green :#3affb9;
+    --black:#0F0F0F;
+  }
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    background-color: #0F0F0F;
+}
+/* .section{
+    position: relative;
+    background: linear-gradient(#F9EA8F,#AFF1DA);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+} */
+
+
+.circle{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+    background-color: var(--orange);
+    clip-path: circle(50px at 0% 0%);
+    height: 50px;
+    width: 50px;
+    display: none;
+    transition: display 0.5s ease-in;
+}
+.end-circle{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 40;
+        background-color: var(--orange);
+        clip-path: circle(50px at 100% 100%);
+        height: 50px;
+        width: 50px;  
+        display: none;
+    transition: display 0.5s ease-in; 
+}
+.end-circle i {
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.circle i{
+    padding: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+.section.rotate + nav ul li{
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+nav{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+nav ul{
+    list-style-type: none;
+    padding: 10px;
+    color: var(--white);
+    
+}
+
+nav ul li{
+    padding: 7px;
+    transform: translateX(-100%);
+    transition: transform 1s linear;  
+    cursor: pointer;  
+}
+/* nav ul li.links:hover{
+    color: var(--green);
+    font-size: 1.1rem;
+} */
+.links{
+    text-decoration: none;
+    color: var(--white);
+}
+.links :hover{
+    color: var(--green);   
+}
+#home:hover{
+    color: #3affb9;
+}
+nav ul li +li{
+    margin-left: 5px;
+    transform: translateX(-150%);
+     
+}
+nav ul li + li + li{
+    margin-left: 10px;
+    transform: translateX(-250%);
+     
+}
+nav ul li + li + li +li{
+    margin-left: 15px;
+    transform: translateX(-350%);
+     
+}
+
+
+.navigate{
+    position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 0;
+}
+.navigate ul{
+    list-style-type: none;
+    padding: 10px;
+    color: var(--white);
+    font-size: 1.7rem;
+    margin-right: 10px;
+}
+.navigate ul li{  
+    transform: translateX(300%);
+    transition: transform 1s linear;  
+    cursor: pointer;  
+    padding: 10px;
+}
+.navigate ul li i:hover{
+    color: var(--green);   
+}
+ul a{
+    color: var(--orange);
+
+}

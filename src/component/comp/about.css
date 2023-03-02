@@ -1,0 +1,133 @@
+:root {
+    --orange: #FF4740;
+    --white: ghostwhite;
+    --blue:#1ca69d;
+    --green :#3affb9;
+    --black:#0F0F0F;
+  }
+  /* body{
+    overflow-x: hidden;
+  } */
+.section{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s linear;
+    transition-delay: 0.3s;
+    z-index: 1;
+    
+}
+.section.rotate{
+    transform: rotate(-17deg);
+    transition-delay: 0.3s;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    background:url('../../img/eight.jpg');
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    box-sizing: border-box;
+    position: relative;
+    padding: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    
+}
+.about_me{
+    position: relative;
+    padding: 1%;
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    z-index: 2;
+    
+}
+.cod{
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    height: 100px;
+    width: 100px;
+    z-index: 3;
+}
+.sui{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    width:60px;
+    z-index: 3;
+}
+.code{
+    position: absolute;
+    bottom: -20%;
+    right:-5%;
+    height: 100px;
+    width: 100px;
+    z-index: 3;
+}
+.download{
+    color: var(--orange);
+}
+.back{
+    position: fixed;
+    top: 0;
+    left: 45%
+}
+.forward_project{
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 45%
+}
+.link{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+.link:hover{
+    color: var(--orange);
+}
+
+.openBack{
+    color: var(--orange);
+}
+.closeBack{
+    
+    color: var(--orange);
+    align-self: flex-end;
+}
+.about_para{
+    /* font-size: 15px; */
+    color: var(--black);
+    text-align: center;
+}
+
+
+@media(max-width:630px ){
+    .about_para{
+        font-size: 0.61rem;
+    }
+    .cod{
+        position: absolute;
+        top: -10%;
+        right: -5%;
+        height: 70px;
+        width: 70px;
+        z-index: 3;
+    }
+}
+ 
